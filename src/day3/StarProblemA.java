@@ -21,7 +21,7 @@ public class StarProblemA {
 			else {
 				System.out.print("*");
 				for(int k=0;k<j;k++) {
-					System.out.print("#");
+					System.out.print(" ");
 				}
 				System.out.println("*");
 				j++;

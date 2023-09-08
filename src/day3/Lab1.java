@@ -12,7 +12,7 @@ public class Lab1 {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the String");
 		String input = sc.nextLine();
-		
+		System.out.println("@"+input+"@");
 		for(int i=0, j=input.length()-1;i<input.length()/2;i++,j--) {
 			if(input.charAt(i)!=input.charAt(j)) {
 				System.out.print("this is not palindrome");
