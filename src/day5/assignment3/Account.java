@@ -39,6 +39,7 @@ public abstract class Account {
 	public double getBalanceFromCustomer() {
 		return this.balance;
 	}
+	
 	public double getBalance() {
 		return this.balance;
 	}

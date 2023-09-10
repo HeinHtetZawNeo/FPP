@@ -1,34 +1,37 @@
 package day5.assignment3;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-	Employee[] emps = null;
+	ArrayList<Employee> emps = null;
 
 	public static void main(String[] args) {
 		new Main();
 	}
 
 	Main() {
-		emps = new Employee[3];
 		
-		emps[0] = new Employee("Jim Daley", 2000, 9, 4);
-		emps[1] = new Employee("Bob Reuben", 1998, 1, 5);
-		emps[2] = new Employee("Susan Randolph", 1997, 2, 13);
-
-		emps[0].createAccount(new CheckingAccount(10500));
-		emps[0].createAccount(new SavingAccount(1000));
-		emps[0].createAccount(new RetirementAccount(9300));
+		emps = new ArrayList<Employee>();
 		
-		emps[1].createAccount(new CheckingAccount(34000));
-		emps[1].createAccount(new SavingAccount(27000));
+		emps.add(new Employee("Jim Daley", 2000, 9, 4));
+		emps.add(new Employee("Bob Reuben", 1998, 1, 5));
+		emps.add(new Employee("Susan Randolph", 1997, 2, 13));
 		
-		emps[2].createAccount(new CheckingAccount(10038));
-		emps[2].createAccount(new SavingAccount(12600));
-		emps[2].createAccount(new RetirementAccount(9000));
+		emps.get(0).createAccount(new CheckingAccount(10500));
+		emps.get(0).createAccount(new SavingAccount(1000));
+		emps.get(0).createAccount(new RetirementAccount(9300));
+		
+		emps.get(1).createAccount(new CheckingAccount(34000));
+		emps.get(1).createAccount(new SavingAccount(27000));
+		
+		emps.get(2).createAccount(new CheckingAccount(10038));
+		emps.get(2).createAccount(new SavingAccount(12600));
+		emps.get(2).createAccount(new RetirementAccount(9000));
 		computeAllBalance();
 		//for phase I – console output
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("A. See a report of all accounts.\n"
 				+ "B. Make a deposit.\n"
@@ -58,7 +61,7 @@ public class Main {
 	}
 
 	
-	private void makeWithdrawal(Employee[] empList) {
+	private void makeWithdrawal(ArrayList<Employee> empList) {
 		
 		//chosose empt
 		Employee emp = chooseEmployee(empList);
@@ -97,7 +100,7 @@ public class Main {
 		
 	}
 	
-	private void makeDeposit(Employee[] empList) {
+	private void makeDeposit(ArrayList<Employee> empList) {
 		
 		//chosose empt
 		Employee emp = chooseEmployee(empList);
@@ -130,12 +133,12 @@ public class Main {
 	}
 	
 	
-	private Employee chooseEmployee(Employee[] emp) {
+	private Employee chooseEmployee(ArrayList<Employee> emp) {
 		Scanner sc = new Scanner(System.in);
 		int number=0;
 		
-		for(int i=0;i<emp.length;i++) {
-			System.out.printf("%d. %s\n",i,emp[i].getName());	
+		for(int i=0;i<emp.size();i++) {
+			System.out.printf("%d. %s\n",i,emp.get(i).getName());	
 		}
 		System.out.println("an employee: (type a number) ");
 		String choice = sc.nextLine();
@@ -146,10 +149,10 @@ public class Main {
 			//System.out.println("Your input is invalid");
 			return null;
 		}
-		if(number>emp.length-1) return null;
+		if(number>emp.size()-1) return null;
 		
 		
-		return emp[number];
+		return emp.get(number);
 	}
 	
 	
