@@ -4,7 +4,7 @@ import java.util.*;
 import day4.prog4_1.AccountType;
 
 public class Employee {
-	private ArrayList<Account> accounts; 
+	private List<Account> accounts; 
 	private String name;
 	private Date hireDate;
 
@@ -41,7 +41,7 @@ public class Employee {
 		return false;
 	}
 	
-	public ArrayList<Account> getAccounts() {
+	public List<Account> getAccounts() {
 		return this.accounts;
 	}
 	public double getTotalBalance() {

@@ -1,4 +1,4 @@
-package day5.assignment4;
+package day6;
 
 public class Circle extends ClosedCurve{
 	double radius;

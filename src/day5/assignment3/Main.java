@@ -1,11 +1,11 @@
 package day5.assignment3;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.Scanner;
 
 public class Main {
-	ArrayList<Employee> emps = null;
+	List<Employee> emps = null;
 
 	public static void main(String[] args) {
 		new Main();
@@ -66,7 +66,7 @@ public class Main {
 	}
 
 	
-	private void makeWithdrawal(ArrayList<Employee> empList) {
+	private void makeWithdrawal(List<Employee> empList) {
 		
 		//chosose empt
 		Employee emp = chooseEmployee(empList);
@@ -105,7 +105,7 @@ public class Main {
 		
 	}
 	
-	private void makeDeposit(ArrayList<Employee> empList) {
+	private void makeDeposit(List<Employee> empList) {
 		
 		//chosose empt
 		Employee emp = chooseEmployee(empList);
@@ -138,7 +138,7 @@ public class Main {
 	}
 	
 	
-	private Employee chooseEmployee(ArrayList<Employee> emp) {
+	private Employee chooseEmployee(List<Employee> emp) {
 		Scanner sc = new Scanner(System.in);
 		int number=0;
 		
@@ -164,7 +164,7 @@ public class Main {
 	private Account chooseAccount(Employee emp) {
 		Scanner sc = new Scanner(System.in);
 		int number=0;
-		ArrayList<Account> accList =emp.getAccounts(); 
+		List<Account> accList =emp.getAccounts(); 
 		int i=0;
 		for(Account ac:accList) {
 			System.out.printf("%d. %s\n",i,ac.getAcctType());
