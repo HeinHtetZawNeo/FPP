@@ -5,6 +5,10 @@ public class CheckingAccount extends Account{
 		super(balance);
 	}
 	
+	public double getBalance() {
+		return super.getBalance();
+	}
+	
 	public String getAcctType() {
 		return "CHECKING";
 	}

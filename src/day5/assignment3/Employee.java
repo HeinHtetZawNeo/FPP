@@ -44,6 +44,13 @@ public class Employee {
 	public ArrayList<Account> getAccounts() {
 		return this.accounts;
 	}
+	public double getTotalBalance() {
+		double total =0.0;
+		for(Account ac:accounts) {
+			total += ac.getBalance();
+		}
+		return total;
+	}
 	/*
 	 * ACCOUNT INFO FOR Jim Daley:
 	 * 

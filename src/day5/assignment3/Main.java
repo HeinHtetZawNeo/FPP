@@ -13,6 +13,8 @@ public class Main {
 
 	Main() {
 		
+		
+		
 		emps = new ArrayList<Employee>();
 		
 		emps.add(new Employee("Jim Daley", 2000, 9, 4));
@@ -29,7 +31,9 @@ public class Main {
 		emps.get(2).createAccount(new CheckingAccount(10038));
 		emps.get(2).createAccount(new SavingAccount(12600));
 		emps.get(2).createAccount(new RetirementAccount(9000));
+		
 		computeAllBalance();
+		forAllEmployeesTotalOfAllBalances();
 		//for phase I – console output
 		
 		Scanner sc = new Scanner(System.in);
@@ -58,6 +62,7 @@ public class Main {
 			System.out.println("Your input is not valid");
 		}
 		computeAllBalance();
+		forAllEmployeesTotalOfAllBalances();
 	}
 
 	
@@ -189,14 +194,17 @@ public class Main {
 		return temp;
 	}
 	
+	private void forAllEmployeesTotalOfAllBalances () {
+		for(Employee e:emps) {
+			System.out.printf("All the balances in employee: $%.2f \n",e.getTotalBalance());
+		}
+	}
 	
 	private void computeAllBalance() {
 		if(emps==null) return;
 		double totalCount =0;
 		for(Employee e:emps) {
-			for(Account a:e.getAccounts()) {
-				totalCount += a.getBalance();
-			}
+			totalCount += e.getTotalBalance();
 		}
 		System.out.printf("All the balances in the bank: $%.2f \n",totalCount);
 	}
