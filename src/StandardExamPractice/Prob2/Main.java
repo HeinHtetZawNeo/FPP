@@ -12,13 +12,13 @@ public class Main {
 		staff.add(new Staff("Tom", 110000, 4));
 		staff.add(new Staff("Edward", 120000, 1));
 		staff.add(new Staff("Rich",90000, 3));
-		staff.add(new Staff("Kevin", 100000,1)); //630,000
+		staff.add(new Staff("Kevin", 100000,1)); 
 
 		List<Teacher> teachers = new ArrayList<>();
-		teachers.add(new Teacher("Andrew", 110000, 10000)); //750,000
-		teachers.add(new Teacher("Rabelais", 130000, 5500)); //885,500
-		teachers.add(new Teacher("Phil", 135000, 12000));	//1,032,500
-		teachers.add(new Teacher("Tony",95000, 8000));		//
+		teachers.add(new Teacher("Andrew", 110000, 10000)); 
+		teachers.add(new Teacher("Rabelais", 130000, 5500)); 
+		teachers.add(new Teacher("Phil", 135000, 12000));
+		teachers.add(new Teacher("Tony",95000, 8000));		
 		
 		
 		//Implementation steps
@@ -34,12 +34,8 @@ public class Main {
 	//IMPLEMENT
 	public static List<EmployeeData> combine(List<Staff> staff, List<Teacher> teachers) {
 		List<EmployeeData> elist = new ArrayList<EmployeeData>();
-		for(Staff s:staff) {
-			elist.add(s);
-		}
-		for(Teacher t:teachers) {
-			elist.add(t);
-		}
+		elist.addAll(teachers);
+		elist.addAll(staff);
 		return elist;
 	}
 
