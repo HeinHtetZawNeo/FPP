@@ -258,6 +258,8 @@ public class Main {
 				}
 				break;
 			case "Sub":
+			case "sub":
+			case "SUB":
 				firstList = null;
 				secondList = null;
 				System.out.println("Enter First List Name :");
@@ -306,6 +308,18 @@ public class Main {
 				return;
 			}
 		}
+		
+		//Test Area
+/*		LinkedList<Character> clist = new LinkedList<Character>();
+		clist.add('B');
+		clist.add('C');
+		clist.add('A');
+		clist.add('A');
+		clist.add('A');
+		clist.add('B');
+		clist.add('C');
+		
+		System.out.println(Search("BC", clist, 0));*/
 	}
 
 	private static void Readstring(LinkedList<Character> list) {
