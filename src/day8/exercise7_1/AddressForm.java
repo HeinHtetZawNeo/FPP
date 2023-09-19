@@ -42,7 +42,6 @@ public class AddressForm extends JFrame {
 		this.getContentPane().add(new JLabel("Street"));
 		// City label
 		this.getContentPane().add(new JLabel("City"));
-
 		// Name Textbox
 		txtName = new JTextField();
 		txtName.setBounds(0, 0, TXTBOX_WIDTH, TXTBOX_HEIGHT);
@@ -86,6 +85,8 @@ public class AddressForm extends JFrame {
 			 */
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				System.out.println(e.getSource() instanceof JButton);
+				System.out.print(((JButton)e.getSource()).getText().equals("Submit"));
 				System.out.println(txtName.getText());
 				System.out.println(txtStreet.getText());
 				System.out.printf("%s, %s %s",txtCity.getText(),txtState.getText(),txtZip.getText());
