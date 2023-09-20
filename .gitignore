@@ -23,3 +23,5 @@
 hs_err_pid*
 replay_pid*
 src/day5/.DS_Store
+src/.DS_Store
+.DS_Store
