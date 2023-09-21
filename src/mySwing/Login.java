@@ -1,7 +1,6 @@
 package mySwing;
 
 import java.awt.Dimension;
-
 import javax.swing.JFrame;
 
 public class Login extends JFrame{
