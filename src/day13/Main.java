@@ -23,36 +23,39 @@ public class Main {
 		myBST.insert(100);
 		myBST.insert(2);
 		myBST.insert(25);
-
-		System.out.println("printTreeInOrder");
-		myBST.printTreeInOrder();
-		System.out.println("printTreePreOrder");
-		myBST.printTreePreOrder();
-		System.out.println("printTreePostOrder");
-		myBST.printTreePostOrder();
+//		System.out.println("printTreeInOrder");
+//		myBST.printTreeInOrder();
+//		System.out.println("printTreePreOrder");
+//		myBST.printTreePreOrder();
+//		System.out.println("printTreePostOrder");
+//		myBST.printTreePostOrder();
+//		
+//		System.out.println("countnodes");
+//		System.out.println(myBST.countnodes());
+//		
+//		System.out.println("countLeaveNodes");
+//		System.out.println(myBST.countLeaveNodes());
 		
-		System.out.println("countnodes");
-		System.out.println(myBST.countnodes());
+		System.out.print(myBST.allEven());
 		
-		System.out.println("countLeaveNodes");
-		System.out.println(myBST.countLeaveNodes());
+		System.out.print(myBST.HowManyEven());
 		
-		//EXTRA CREDIT
-		TreeMap<Integer, Object> myTreeMap = new TreeMap<Integer, Object>();
-		myTreeMap.put(15, new Object());
-		myTreeMap.put(12, new Object());
-		myTreeMap.put(9, new Object());
-		myTreeMap.put(56, new Object());
-		myTreeMap.put(1, new Object());
-		myTreeMap.put(16, new Object());
-		myTreeMap.put(19, new Object());
-		myTreeMap.put(22, new Object());
-		myTreeMap.put(3, new Object());
-		myTreeMap.put(100, new Object());
-		myTreeMap.put(2, new Object());
-		myTreeMap.put(25, new Object());
-		
-		Set<Entry<Integer, Object>> myTreeSet = myTreeMap.entrySet();
+//		//EXTRA CREDIT
+//		TreeMap<Integer, Object> myTreeMap = new TreeMap<Integer, Object>();
+//		myTreeMap.put(15, new Object());
+//		myTreeMap.put(12, new Object());
+//		myTreeMap.put(9, new Object());
+//		myTreeMap.put(56, new Object());
+//		myTreeMap.put(1, new Object());
+//		myTreeMap.put(16, new Object());
+//		myTreeMap.put(19, new Object());
+//		myTreeMap.put(22, new Object());
+//		myTreeMap.put(3, new Object());
+//		myTreeMap.put(100, new Object());
+//		myTreeMap.put(2, new Object());
+//		myTreeMap.put(25, new Object());
+//		
+//		Set<Entry<Integer, Object>> myTreeSet = myTreeMap.entrySet();
 	}
 
 }

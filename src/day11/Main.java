@@ -349,14 +349,15 @@ public class Main {
 	private static int Len(LinkedList<Character> list) {
 		int count =0;
 		Iterator<Character> myIterator = list.iterator();
-		while(myIterator.hasNext()) {
+		while(myIterator.hasNext()) { //5
+			
 			count++;
 			myIterator.next();
 		}
 		return count;
 	}
 	
-	private static boolean Equal(LinkedList<Character> listA,LinkedList<Character> listB) {
+	public static boolean Equal(LinkedList<Character> listA,LinkedList<Character> listB) {
 		
 		if(Len(listA) != Len(listB)) return false;
 		

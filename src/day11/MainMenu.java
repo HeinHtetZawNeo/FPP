@@ -50,6 +50,9 @@ public class MainMenu extends JFrame {
 		JButton btnEqual = new JButton();
 		btnEqual.setBounds(120, 70, BUTTON_WIDTH, BUTTON_HEIGHT);
 		btnEqual.setText("Equal");
+		btnEqual.addActionListener(e->{
+			new EqualUI();
+		});
 		this.add(btnEqual);
 
 		JButton btnInsert = new JButton();

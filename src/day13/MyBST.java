@@ -62,18 +62,45 @@ public class MyBST {
 		else
 			return countnodes(root);
 	}
+	
 	private int countnodes(BinaryNode t) {
 		if(t != null) {
 			return countnodes(t.left) + countnodes(t.right) + 1;
 		}else
 			return 0;
 	}
+	
+	public boolean allEven() {
+		return allEven(root);
+	}
+	
+	private boolean allEven(BinaryNode t) {
+		if(t==null) return true;
+		if(t.element%2==0)
+			return true && allEven(t.left) && allEven(t.right);
+		else
+			return false;
+	}
+	
+	public int HowManyEven() {
+		return HowManyEven(root);
+	}
+	
+	private int HowManyEven(BinaryNode t) {
+		if(t==null) return 0;
+		if(t.element%2==0)
+			return 1 + HowManyEven(t.left) + HowManyEven(t.right);
+		else
+			return 0+ HowManyEven(t.left) + HowManyEven(t.right);
+	}
+	
 	public int countLeaveNodes() {
 		if(root == null)
 			return 0;
 		else
 			return countLeaveNodes(root);
 	}
+	
 	private int countLeaveNodes(BinaryNode t) {
 		if(t==null) {
 			return 0;
