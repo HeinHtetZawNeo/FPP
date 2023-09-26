@@ -1,7 +1,7 @@
 package StandardExamPractice.Dec2016.Prob1;
 
 //DO NOT MODIFY IN ANY WAY
-public class Employee implements Comparable<T>{
+public class Employee {
 	private String name;
 	private int salary;
 	private String ssn;
@@ -42,11 +42,5 @@ public class Employee implements Comparable<T>{
 		if(!(ob instanceof Employee)) return false;
 		Employee e = (Employee)ob;
 		return e.ssn.equals(ssn);
-	}
-
-	@Override
-	public int compareTo(T o) {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 }

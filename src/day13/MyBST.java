@@ -1,5 +1,7 @@
 package day13;
 
+import org.w3c.dom.Node;
+
 public class MyBST {
 	/** The tree root. */
 	private BinaryNode root;
@@ -16,12 +18,13 @@ public class MyBST {
 			System.out.println("Empty tree");
 		else
 			printTreeInOrder(root);
+		System.out.println();
 	}
 
 	private void printTreeInOrder(BinaryNode t) {
 		if (t != null) {
 			printTreeInOrder(t.left);
-			System.out.println(t.element);
+			System.out.print(t.element+",");
 			printTreeInOrder(t.right);
 		} // An INORDER Traversal
 	}
@@ -31,11 +34,12 @@ public class MyBST {
 			System.out.println("Empty tree");
 		else
 			printTreePreOrder(root);
+		System.out.println();
 	}
 
 	private void printTreePreOrder(BinaryNode t) {
 		if (t != null) {
-			System.out.println(t.element);
+			System.out.print(t.element+",");
 			printTreePreOrder(t.left);
 			printTreePreOrder(t.right);
 		} // An PreOrder Traversal
@@ -46,16 +50,51 @@ public class MyBST {
 			System.out.println("Empty tree");
 		else
 			printTreePostOrder(root);
+		System.out.println();
 	}
 
 	private void printTreePostOrder(BinaryNode t) {
 		if (t != null) {
 			printTreePostOrder(t.left);
 			printTreePostOrder(t.right);
-			System.out.println(t.element);
+			System.out.print(t.element+",");
 		} // An PreOrder Traversal
 	}
 
+	public Integer getMiddle() {
+		if(countnodes()%2==0)
+			return null;
+		System.out.println("Start Finding mid");
+		BinaryNode b= getMiddle(0,root,0);
+		if(b!=null)
+			return b.element;
+		return null;
+	}
+	private BinaryNode getMiddle(int left,BinaryNode t, int right) {
+		if(t==null) {
+			return null;
+		}
+		
+		System.out.println("Checking "+t.element);
+		System.out.println("Left Side "+(left+countnodes(t.left)));
+		System.out.println("Right Side "+(right+countnodes(t.right)));
+		
+		if(left+countnodes(t.left)==right+countnodes(t.right)) {
+			System.out.println("found");
+			return t;
+		}
+		if(left+countnodes(t.left)>right+countnodes(t.right)) {
+			System.out.println("going left");
+			return getMiddle(left,t.left,right+countnodes(t.right)+1);
+		}
+			
+		
+		//if(left+countnodes(t.left)<right+countnodes(t.right)) {
+			System.out.println("going right");
+			return getMiddle(left+countnodes(t.left)+1,t.right,right);
+		//}
+	}
+	
 	public int countnodes() {
 		if(root == null)
 			return 0;
@@ -82,6 +121,11 @@ public class MyBST {
 			return false;
 	}
 	
+	public Integer findMax(BinaryNode t) {
+		if(t==null) return null;
+		if(t.right == null) return t.element;
+		return findMax(t.right);
+	}
 	public int HowManyEven() {
 		return HowManyEven(root);
 	}
@@ -142,6 +186,8 @@ public class MyBST {
 				else {
 					n = n.right;
 				}
+			} else {
+				return;
 			}
 		}
 

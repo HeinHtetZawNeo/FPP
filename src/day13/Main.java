@@ -23,22 +23,35 @@ public class Main {
 		myBST.insert(100);
 		myBST.insert(2);
 		myBST.insert(25);
-//		System.out.println("printTreeInOrder");
-//		myBST.printTreeInOrder();
-//		System.out.println("printTreePreOrder");
-//		myBST.printTreePreOrder();
-//		System.out.println("printTreePostOrder");
-//		myBST.printTreePostOrder();
-//		
-//		System.out.println("countnodes");
-//		System.out.println(myBST.countnodes());
-//		
-//		System.out.println("countLeaveNodes");
-//		System.out.println(myBST.countLeaveNodes());
+		myBST.insert(200);
+		myBST.insert(300);
+		myBST.insert(7);
+		myBST.insert(80);
+		myBST.insert(90);
+		myBST.insert(100);
+		myBST.insert(70);
+		myBST.insert(65);
+		myBST.insert(60);
+		myBST.insert(76);
 		
-		System.out.print(myBST.allEven());
+		System.out.println(myBST.countnodes());
+		System.out.println(myBST.getMiddle());
+		System.out.println("printTreeInOrder");
+		myBST.printTreeInOrder();
+		System.out.println("printTreePreOrder");
+		myBST.printTreePreOrder();
+		System.out.println("printTreePostOrder");
+		myBST.printTreePostOrder();
+//		
+		System.out.println("countnodes");
+		System.out.println(myBST.countnodes());
 		
-		System.out.print(myBST.HowManyEven());
+		System.out.println("countLeaveNodes");
+		System.out.println(myBST.countLeaveNodes());
+		System.out.println("All Even?");
+		System.out.println(myBST.allEven());
+		System.out.println("How Many Even");
+		System.out.println(myBST.HowManyEven());
 		
 //		//EXTRA CREDIT
 //		TreeMap<Integer, Object> myTreeMap = new TreeMap<Integer, Object>();
@@ -56,6 +69,8 @@ public class Main {
 //		myTreeMap.put(25, new Object());
 //		
 //		Set<Entry<Integer, Object>> myTreeSet = myTreeMap.entrySet();
+		
+		
 	}
 
 }
