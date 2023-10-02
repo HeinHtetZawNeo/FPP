@@ -70,6 +70,7 @@ public class MyBST {
 			return b.element;
 		return null;
 	}
+	
 	private BinaryNode getMiddle(int left,BinaryNode t, int right) {
 		if(t==null) {
 			return null;

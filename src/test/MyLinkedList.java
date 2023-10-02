@@ -1,5 +1,7 @@
 package test;
 
+import java.util.HashSet;
+import java.util.Map.Entry;
 
 public class MyLinkedList {
 	Node Head;
@@ -7,16 +9,25 @@ public class MyLinkedList {
 	
 	public static void main(String[] args) {
 		MyLinkedList mylist = new MyLinkedList();
-		fillMyList(mylist);
-		System.out.println(mylist.size());
-		System.out.println("Remove First");
-		while(mylist.size()>0) {
-			System.out.print(mylist.removeFirst().myValue);			
-		}
-		fillMyList(mylist);
-		System.out.println("\nRemove Last");
-		while(mylist.size()>0) {
-			System.out.print(mylist.removeLast().myValue);			
+//		fillMyList(mylist);
+//		System.out.println(mylist.size());
+//		System.out.println("Remove First");
+//		while(mylist.size()>0) {
+//			System.out.print(mylist.removeFirst().myValue);			
+//		}
+//		fillMyList(mylist);
+//		System.out.println("\nRemove Last");
+//		while(mylist.size()>0) {
+//			System.out.print(mylist.removeLast().myValue);			
+//		}
+		
+		HashSet<Integer> mySet = new HashSet<Integer>();
+		mySet.add(3);
+		mySet.add(3);
+		mySet.add(3);
+		
+		for(Integer t:mySet) {
+			System.out.println(t);
 		}
 	}
 	public static MyLinkedList fillMyList(MyLinkedList list) {
